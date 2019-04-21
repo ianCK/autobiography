@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>林意恩</title>
-    <script>
-        show_Ian = function(tag) {
-            if (tag) document.getElementById('Ian').style.display = 'block';
-            else document.getElementById('Ian').style.display = 'none';
+    <style>
+        #word {
+            background-image: url(照片/wood.jpeg);
+            background-size: cover;
+            color: #a01d1d;
         }
-    </script>
+    </style>
 </head>
 
 <body style="margin:0px;padding:0px;background:url(照片/bg-bridge.jpeg)center center fixed no-repeat;background-size: cover;">
@@ -38,14 +39,37 @@
         </div>
     </nav>
     <!--文字敘述-->
-
+    <div class="container">
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <img src="./照片/牌盒.jpg" class="card-img-top" alt="...">
+                <div class="card-body" id="word">
+                    <h5 class="card-title">第一次接觸</h5>
+                    <p class="card-text">考完國中會考之後的閒暇時間我第一次接觸到了橋牌</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./照片/建中.jpg" class="card-img-top" alt="...">
+                <div class="card-body" id="word">
+                    <h5 class="card-title">建中橋藝社</h5>
+                    <p class="card-text">在建中橋藝社中我擔任了副社長的職位，常常帶領學弟四處參加各大比賽</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./照片/BTU icon.png" class="card-img-top" alt="...">
+                <div class="card-body" id="word">
+                    <h5 class="card-title">台大橋藝社(BTU)</h5>
+                    <p class="card-text">現在我是台大橋藝社的社員，每週都會參與固定的練牌。<br>在現任社長的帶領下在各大專賽事當中屢獲佳績</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--footer-->
     <footer style="color:white;margin-top:20px">
         <div style="margin-top:2px;border-top:solid 2px gray;text-align:center ">
-            <span onmouseover="show_Ian(true)" onmouseout="show_Ian()">2019 &copy iaNTU</span>
+            2019 &copy iaNTU
         </div>
-        <img style="display: none" id="Ian" src="./照片/證件照.png">
     </footer>
 </body>
 
-</html>
+</html>ｂ
