@@ -12,12 +12,35 @@
             margin-top: 100px;
         }
         
-        #word {
+        .word {
             background-image: url(照片/dark.jpeg);
             background-size: cover;
             color: #d8edf8;
         }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
+    <script>
+        show_first = function(tag) {
+            if (tag) document.getElementById('first').innerHTML = '<br>我開始接觸程式設計是在高中一年級的電腦課，老師教我們C++的基本操作<br><br>雖然說上課內容很簡單、基本，但也因此開啟了我對程式設計的興趣';
+            else document.getElementById('first').innerHTML = '';
+        }
+        show_second = function(tag) {
+            if (tag) document.getElementById('second').innerHTML = '<br>高二下的時候報名參加了資訊校隊補選<br><br>雖然沒有入選，不過因為這次的參賽認識到了TIOJ這個解題網站<br><br>從那之後只要有空就會寫寫放在上面的演算法題目<br><br>在高三的時候還曾經成為網站上解題數的第一名(現在帳號刪掉了)';
+            else document.getElementById('second').innerHTML = '';
+        }
+        show_third = function(tag) {
+            if (tag) document.getElementById('third').innerHTML = '<br>高三的時候成功入選建中的資訊校隊<br><br>並通過入營考，進入資訊奧林匹亞的培訓營<br><br>可惜止步於第一階段培訓';
+            else document.getElementById('third').innerHTML = '';
+        }
+        show_forth = function(tag) {
+            if (tag) document.getElementById('forth').innerHTML = '<br>上了大學之後還是有持續在寫程式<br><br>主要是在codeforces上面打contest<br><br>GCJ、codechef、atcoder上面的比賽也常常參加<br><br>值得一提的大概就是去年在codechef辦的snackdown上贏得了一件T-shirt';
+            else document.getElementById('forth').innerHTML = '';
+        }
+    </script>
 </head>
 
 <body style="margin:0px;padding:0px;background:url(照片/eletronic.jpeg)center center fixed no-repeat;background-size:cover;">
@@ -49,57 +72,32 @@
     <!--文字敘述-->
     <div class="container">
         <div class="row">
-            <div class="col-sm rounded" id="word">
-                <br>
-                <p>我開始接觸程式設計是在高中一年級的電腦課，老師教我們C++的基本操作</p>
-                <p>雖然說上課內容很簡單、基本，但也因此開啟了我對程式設計的興趣</p>
+            <div class="col-sm rounded word" id="first" onmouseover="show_first(true)" onmouseout="show_first()">
+                <p id="first"></p>
             </div>
-            <div class="col-sm-3">
-                <img src="./照片/dev C++.png" class="img-fluid">
+            <div class="col-sm-3"><img src="./照片/dev C++.png"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><img src="./照片/TIOJ.png"></div>
+            <div class="col-sm rounded word" onmouseover="show_second(true)" onmouseout="show_second()">
+                <p id="second"></p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
-                <img src="./照片/TIOJ.png" class="img-fluid">
+            <div class="col-sm rounded word" onmouseover="show_third(true)" onmouseout="show_third()">
+                <p id="third"></p>
             </div>
-            <div class="col-sm rounded" id="word">
-                <br>
-                <p>高二下的時候報名參加了資訊校隊補選</p>
-                <p>雖然沒有入選，不過因為這次的參賽認識到了TIOJ這個解題網站</p>
-                <p>從那之後只要有空就會寫寫放在上面的演算法題目</p>
-                <p>在高三的時候還曾經成為網站上解題數的第一名(現在帳號刪掉了)</p>
-            </div>
+            <div class="col-sm-8 "><img src="./照片/TOI.jpg "></div>
         </div>
         <div class="row">
-            <div class="col-sm rounded" id="word">
-                <br>
-                <p>高三的時候成功入選建中的資訊校隊</p>
-                <p>並通過入營考，進入資訊奧林匹亞的培訓營</p>
-                <p>可惜止步於第一階段培訓</p>
-            </div>
-            <div class="col-sm-8 ">
-                <img src="./照片/TOI.jpg " class="img-fluid">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="./照片/CF id.png" class="img-fluid">
-            </div>
-            <div class="col-sm rounded" id="word">
-                <br>
-                <p>上了大學之後還是有持續在寫程式</p>
-                <p>主要是在codeforces上面打contest</p>
-                <p>GCJ、codechef、atcoder上面的比賽也常常參加</p>
-                <p>值得一提的大概就是去年在codechef辦的snackdown上贏得了一件T-shirt</p>
+            <div class="col-sm-4"><img src="./照片/CF id.png"></div>
+            <div class="col-sm rounded word" onmouseover="show_forth(true)" onmouseout="show_forth()">
+                <p id="forth"></p>
             </div>
         </div>
     </div>
     <!--footer-->
-    <footer style="color:white;margin-top:20px">
-        <div style="margin-top:2px;border-top:solid 2px gray;text-align:center ">
-            2019 &copy iaNTU
-        </div>
-    </footer>
+    <footer style="color:white;margin-top:20px;border-top:solid 2px gray;text-align:center">2019 &copy iaNTU</footer>
 </body>
 
-</html>ｂ
+</html>

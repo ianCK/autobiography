@@ -12,11 +12,22 @@
             margin-top: 200px;
         }
         
-        #word {
+        .word {
             background-image: url(照片/bg-ice.jpeg);
             background-size: cover;
         }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
+    <script>
+        show_first = function(tag) {
+            if (tag) document.getElementById('first').innerHTML = '<br>我是林意恩，現在就讀台大外文系。<br><br>平時喜歡看動畫、寫程式，偶爾也會去橋藝社打打牌。<br><br>正在學習俄文和日文，俄文的話還是初學，不過日文的話有N2的實力且正在準備N1<br><br>Здравствуйте，меня зовут Иан。<br><br>私は林意恩でございます、どうぞよろしくお願いいたします。'
+            else document.getElementById('first').innerHTML = '';
+        }
+    </script>
 </head>
 
 <body style="margin:0px;padding:0px;background:url(照片/violet.png)center center fixed no-repeat;background-size: cover;">
@@ -45,29 +56,20 @@
         </div>
     </nav>
     <!--文字敘述-->
-    <h1 class="text-center" style="margin-top:200px;font-family: fantasy;color:#1600ff;font-size:50px">Ian Lin's Profile</h1>
+    <h1 class="text-center" style="margin-top:200px;font-family: fantasy;color:#1600ff;font-size:72px">Ian Lin's Resume</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <img src="./照片/證件照.png" class="img-fluid">
+                <img src="./照片/證件照.png">
             </div>
-            <div class="col-sm rounded" id="word">
-                <br>
-                <p>我是林意恩，現在就讀台大外文系。</p>
-                <p>平時喜歡看動畫、寫程式，偶爾也會去橋藝社打打牌。</p>
-                <p>正在學習俄文和日文，俄文的話還是初學，不過日文的話有N2的實力且正在準備N1</p>
-                <p>Здравствуйте，меня зовут Иан。</p>
-                <p>私は林意恩でございます、どうぞよろしくお願いいたします</p>
+            <div class="col-sm rounded word" onmouseover="show_first(true)" onmouseout="show_first()">
+                <p id="first"></p>
             </div>
         </div>
     </div>
 
     <!--footer-->
-    <footer style="color:white;margin-top:20px">
-        <div style="margin-top:2px;border-top:solid 2px gray;text-align:center ">
-            2019 &copy iaNTU
-        </div>
-    </footer>
+    <footer style="color:white;margin-top:20px;border-top:solid 2px gray;text-align:center">2019 &copy iaNTU</footer>
 </body>
 
 </html>
